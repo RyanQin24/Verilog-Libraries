@@ -21,9 +21,10 @@
 
 
 module Decoder(
-    input wire[3:0] number,
-    output wire [6:0] seg
+    input wire[3:0] number, // 4-bit input
+    output wire [6:0] seg  // 7-segment output
     );
+
     
     assign seg = (number == 4'b0000) ? 7'b1000000 :
                  (number == 4'b0001) ? 7'b1111001 :
